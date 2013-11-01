@@ -1,6 +1,6 @@
 package toos2;
 
-public abstract  class Voter {
+public class Voter {
 	public boolean vote;
 	public int voted;
 	
