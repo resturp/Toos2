@@ -34,6 +34,10 @@ public class TestCensus {
 		} else {
 			System.out.println("Fail");
 		}
+		
+
+		test(new Census4());
+
 
 	}
 
