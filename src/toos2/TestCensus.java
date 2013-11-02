@@ -1,8 +1,6 @@
 package toos2;
 
-
 import java.util.ArrayList;
-
 
 public class TestCensus {
 
@@ -28,16 +26,21 @@ public class TestCensus {
 
 	public static void main(String[] args) {
 
+		ArrayList<Census> toTest = new ArrayList<Census>();
+		toTest.add(new Census1());
+		toTest.add(new Census2());
+		toTest.add(new Census3());
+		toTest.add(new Census4());
+		toTest.add(new Census5());
+		toTest.add(new Census6());
 
-		if (test(new Census1())) {
-			System.out.println("Succes");
-		} else {
-			System.out.println("Fail");
+		for (Census c : toTest) {
+			if (test(c)) {
+				System.out.println("Succes on " + c.toString());
+			} else {
+				System.out.println("Fail on " + c.toString());
+			}
 		}
-		
-
-		test(new Census4());
-
 
 	}
 

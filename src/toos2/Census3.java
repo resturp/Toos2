@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class Census3 implements Census {
 
 	@Override
-	public boolean voting(ArrayList<Voter> voters) {
+	public boolean voting(ArrayList<Voter> voters) throws Exception {
 		int notNullVotes = 0;
 		int nullVotes = 0;
 		boolean result = true;
@@ -25,15 +25,14 @@ public class Census3 implements Census {
 		}
 		
 		if (notNullVotes + nullVotes > voters.size()) {
-			//throw new Exception( "Valid voters has voted more than once.");
+			throw new Exception( "Valid voters has voted more than once.");
 		} else {
 			if (notNullVotes + nullVotes < voters.size()) {
-				//throw new Exception( "Valid voters has not voted.");
+				throw new Exception( "Valid voters has not voted.");
 			} else {
 				return result;
 			}
 		}
-		return result;
 	}
 
 }
