@@ -2,17 +2,20 @@ package toos2;
 
 public class Voter {
 	public boolean vote;
-	public int voted;
+	private int voted;
 	
 	public boolean vote() {		
+		this.voted++;
 		return vote;		
 	}
 
 	public Voter(boolean init) {		
 		this.vote = init;
-		this.voted++;
 	}
 	
+	public void resetVoted() {
+		voted = 0;
+	}
 	public int getVoted(){
 		return voted;
 	}

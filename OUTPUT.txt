@@ -1,0 +1,76 @@
+##### testing toos2.Census1 #####
+Succes: test voterslist is null on toos2.Census1@1034bb5
+Succes: test voterslist is empty on toos2.Census1@1034bb5
+Succes: test Singel voter is null on toos2.Census1@1034bb5
+Succes: test Singel voter is false on toos2.Census1@1034bb5
+Succes: test Singel voter is true on toos2.Census1@1034bb5
+Succes: test Second voter is false on toos2.Census1@1034bb5
+Failed: at least one voter did not vote in third voter is false on toos2.Census1@1034bb5
+Failed: missing exception in One voter votes twice on toos2.Census1@1034bb5
+##### Fail on toos2.Census1 #####
+
+##### testing toos2.Census2 #####
+Failed: unexpectede exception null in voterslist is null on toos2.Census2@b162d5
+Succes: test voterslist is empty on toos2.Census2@b162d5
+Failed: unexpectede exception null in Singel voter is null on toos2.Census2@b162d5
+Succes: test Singel voter is false on toos2.Census2@b162d5
+Succes: test Singel voter is true on toos2.Census2@b162d5
+Succes: test Second voter is false on toos2.Census2@b162d5
+Failed: at least one voter did not vote in third voter is false on toos2.Census2@b162d5
+Failed: missing exception in One voter votes twice on toos2.Census2@b162d5
+##### Fail on toos2.Census2 #####
+
+##### testing toos2.Census3 #####
+Succes: test voterslist is null on toos2.Census3@1cfb549
+Succes: test voterslist is empty on toos2.Census3@1cfb549
+Succes: test Singel voter is null on toos2.Census3@1cfb549
+Succes: test Singel voter is false on toos2.Census3@1cfb549
+Succes: test Singel voter is true on toos2.Census3@1cfb549
+Succes: test Second voter is false on toos2.Census3@1cfb549
+Succes: test third voter is false on toos2.Census3@1cfb549
+Failed: missing exception in One voter votes twice on toos2.Census3@1cfb549
+##### Fail on toos2.Census3 #####
+
+##### testing toos2.Census4 #####
+Failed: test voterslist is null on toos2.Census4@186d4c1
+Failed: test voterslist is empty on toos2.Census4@186d4c1
+Failed: test Singel voter is null on toos2.Census4@186d4c1
+Failed: at least one voter did not vote in Singel voter is false on toos2.Census4@186d4c1
+Failed: at least one voter did not vote in Singel voter is true on toos2.Census4@186d4c1
+Failed: at least one voter did not vote in Second voter is false on toos2.Census4@186d4c1
+Failed: at least one voter did not vote in third voter is false on toos2.Census4@186d4c1
+Failed: missing exception in One voter votes twice on toos2.Census4@186d4c1
+##### Fail on toos2.Census4 #####
+
+##### testing toos2.Census5 #####
+Failed: unexpectede exception null in voterslist is null on toos2.Census5@f9f9d8
+Succes: test voterslist is empty on toos2.Census5@f9f9d8
+Failed: unexpectede exception null in Singel voter is null on toos2.Census5@f9f9d8
+Succes: test Singel voter is false on toos2.Census5@f9f9d8
+Failed: test Singel voter is true on toos2.Census5@f9f9d8
+Succes: test Second voter is false on toos2.Census5@f9f9d8
+Succes: test third voter is false on toos2.Census5@f9f9d8
+Failed: missing exception in One voter votes twice on toos2.Census5@f9f9d8
+##### Fail on toos2.Census5 #####
+
+##### testing toos2.Census6 #####
+Succes: test voterslist is null on toos2.Census6@1820dda
+Succes: test voterslist is empty on toos2.Census6@1820dda
+Succes: test Singel voter is null on toos2.Census6@1820dda
+Failed: at least one voter did not vote in Singel voter is false on toos2.Census6@1820dda
+Failed: at least one voter did not vote in Singel voter is true on toos2.Census6@1820dda
+Failed: at least one voter did not vote in Second voter is false on toos2.Census6@1820dda
+Failed: at least one voter did not vote in third voter is false on toos2.Census6@1820dda
+Failed: missing exception in One voter votes twice on toos2.Census6@1820dda
+##### Fail on toos2.Census6 #####
+
+##### testing toos2.Census7 #####
+Succes: test voterslist is null on toos2.Census7@15b7986
+Succes: test voterslist is empty on toos2.Census7@15b7986
+Succes: test Singel voter is null on toos2.Census7@15b7986
+Succes: test Singel voter is false on toos2.Census7@15b7986
+Succes: test Singel voter is true on toos2.Census7@15b7986
+Succes: test Second voter is false on toos2.Census7@15b7986
+Succes: test third voter is false on toos2.Census7@15b7986
+Succes: exception in One voter votes twice on toos2.Census7@15b7986
+##### Succes on toos2.Census7 #####
