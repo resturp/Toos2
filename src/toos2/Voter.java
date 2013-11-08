@@ -2,7 +2,7 @@ package toos2;
 
 public class Voter {
 	public boolean vote;
-	private int voted;
+	private int voted = 0;
 	
 	public boolean vote() {		
 		this.voted++;

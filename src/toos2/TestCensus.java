@@ -47,7 +47,7 @@ public class TestCensus {
 				return ("Succes: exception in " + testName + " on " + toTest
 						.toString());
 			} else {
-				return ("Failed: unexpectede exception " + e.getMessage()
+				return ("Failed: unexpected exception " + e.getMessage()
 						+ " in " + testName + " on " + toTest.toString());
 			}
 		}
@@ -123,66 +123,110 @@ public class TestCensus {
 		System.out.println("##### testing SpecializedCensus #####");
 		
 		// Create voter lists
-		ArrayList<Voter> v1 = null; // null
-		ArrayList<Voter> v2 = new ArrayList<Voter>(); // Empty
-		ArrayList<Voter> v3 = new ArrayList<Voter>(); // 1 true
-		v3.add(new Voter(true));
-		ArrayList<Voter> v4 = new ArrayList<Voter>(); // 1 false
-		v4.add(new Voter(false));
-		ArrayList<Voter> v5 = new ArrayList<Voter>(); // 1 true and 1 false
-		v5.add(new Voter(true));
-		v5.add(new Voter(false));
+		ArrayList<Voter> v1t = null; // null
+		ArrayList<Voter> v1f = null; // null
+		ArrayList<Voter> v2t = new ArrayList<Voter>(); // Empty
+		ArrayList<Voter> v2f = new ArrayList<Voter>(); // Empty
+		ArrayList<Voter> v3t = new ArrayList<Voter>(); // 1 true
+		ArrayList<Voter> v3f = new ArrayList<Voter>(); // 1 true
+		v3t.add(new Voter(true));
+		v3f.add(new Voter(true));
+		ArrayList<Voter> v4t = new ArrayList<Voter>(); // 1 false
+		ArrayList<Voter> v4f = new ArrayList<Voter>(); // 1 false
+		v4t.add(new Voter(false));
+		v4f.add(new Voter(false));
+		ArrayList<Voter> v5t = new ArrayList<Voter>(); // 1 true and 1 false
+		ArrayList<Voter> v5f = new ArrayList<Voter>(); // 1 true and 1 false
+		v5t.add(new Voter(true));
+		v5f.add(new Voter(true));
+		v5t.add(new Voter(false));
+		v5f.add(new Voter(false));
 		
 		// Create Specialized Census
-		SpecializedCensus SC1 = new SpecializedCensus();
-		SpecializedCensus SC2 = new SpecializedCensus();
-		SpecializedCensus SC3 = new SpecializedCensus();
-		SpecializedCensus SC4 = new SpecializedCensus();
-		SpecializedCensus SC5 = new SpecializedCensus();
+		SpecializedCensusTrue SC1T = new SpecializedCensusTrue();
+		SpecializedCensusFalse SC1F = new SpecializedCensusFalse();
+		SpecializedCensusTrue SC2T = new SpecializedCensusTrue();
+		SpecializedCensusFalse SC2F = new SpecializedCensusFalse();
+		SpecializedCensusTrue SC3T = new SpecializedCensusTrue();
+		SpecializedCensusFalse SC3F = new SpecializedCensusFalse();
+		SpecializedCensusTrue SC4T = new SpecializedCensusTrue();
+		SpecializedCensusFalse SC4F = new SpecializedCensusFalse();
+		SpecializedCensusTrue SC5T = new SpecializedCensusTrue();
+		SpecializedCensusFalse SC5F = new SpecializedCensusFalse();	
 		
 		// Let's vote
-		try {
-			SC1.voting(v1);		
-			SC2.voting(v2);
-			SC3.voting(v3);
-			SC4.voting(v4);
-			SC5.voting(v5);
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		try { SC1T.voting(v1t); } catch (Exception e) { e.printStackTrace(); }
+		try { SC1F.voting(v1f); } catch (Exception e) { e.printStackTrace(); }
+		try { SC2T.voting(v2t); } catch (Exception e) { e.printStackTrace(); }
+		try { SC2F.voting(v2f); } catch (Exception e) { e.printStackTrace(); }
+		try { SC3T.voting(v3t); } catch (Exception e) { e.printStackTrace(); }
+		try { SC3F.voting(v3f); } catch (Exception e) { e.printStackTrace(); }
+		try { SC4T.voting(v4t); } catch (Exception e) { e.printStackTrace(); }
+		try { SC4F.voting(v4f); } catch (Exception e) { e.printStackTrace(); }
+		try { SC5T.voting(v5t); } catch (Exception e) { e.printStackTrace(); }
+		try { SC5F.voting(v5f); } catch (Exception e) { e.printStackTrace(); }	
 		
 		// Check
-		if( SC1.getTrueVotes() == 0 && SC1.getFalseVotes() == 0) {
-			System.out.println("##### Succes on SC1 #####");
+		
+		if( SC1T.getTrueVotes() == 0) {
+			System.out.println("##### Succes on SC1T #####");
 		} else {
-			System.out.println("##### Fail on SC1 #####");
-		}
-		if( SC2.getTrueVotes() == 0 && SC2.getFalseVotes() == 0) {
-			System.out.println("##### Succes on SC2 #####");
-		} else {
-			System.out.println("##### Fail on SC2 #####");
-		}
-
-		if( SC3.getTrueVotes() == 1 && SC3.getFalseVotes() == 0) {
-			System.out.println("##### Succes on SC3 #####");
-		} else {
-			System.out.println("##### Fail on SC3 #####");
-		}
-
-		if( SC4.getTrueVotes() == 0 && SC4.getFalseVotes() == 1) {
-			System.out.println("##### Succes on SC4 #####");
-		} else {
-			System.out.println("##### Fail on SC4 #####");
-		}
-
-		if( SC5.getTrueVotes() == 1 && SC5.getFalseVotes() == 1) {
-			System.out.println("##### Succes on SC5 #####");
-		} else {
-			System.out.println("##### Fail on SC5 #####");
+			System.out.println("##### Fail on SC1T #####");
 		}
 		
+		if( SC1F.getFalseVotes() == 0) {
+			System.out.println("##### Succes on SC1F #####");
+		} else {
+			System.out.println("##### Fail on SC1F #####");
+		}
 		
+		if( SC2T.getTrueVotes() == 0) {
+			System.out.println("##### Succes on SC2T #####");
+		} else {
+			System.out.println("##### Fail on SC2T #####");
+		}
+		
+		if( SC2F.getFalseVotes() == 0) {
+			System.out.println("##### Succes on SC2F #####");
+		} else {
+			System.out.println("##### Fail on SC2F #####");
+		}
+		
+		if( SC3T.getTrueVotes() == 1) {
+			System.out.println("##### Succes on SC3T #####");
+		} else {
+			System.out.println("##### Fail on SC3T #####");
+		}
+		
+		if( SC3F.getFalseVotes() == 0) {
+			System.out.println("##### Succes on SC3F #####");
+		} else {
+			System.out.println("##### Fail on SC3F #####");
+		}
+		
+		if( SC4T.getTrueVotes() == 0) {
+			System.out.println("##### Succes on SC4T #####");
+		} else {
+			System.out.println("##### Fail on SC4T #####");
+		}
+		
+		if( SC4F.getFalseVotes() == 1) {
+			System.out.println("##### Succes on SC4F #####");
+		} else {
+			System.out.println("##### Fail on SC4F #####");
+		}
+		
+		if( SC5T.getTrueVotes() == 1) {
+			System.out.println("##### Succes on SC5T #####");
+		} else {
+			System.out.println("##### Fail on SC5T #####");
+		}
+		
+		if( SC5F.getFalseVotes() == 1) {
+			System.out.println("##### Succes on SC5F #####");
+		} else {
+			System.out.println("##### Fail on SC5F #####");
+		}		
 	
 	}
 
