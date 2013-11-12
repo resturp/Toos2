@@ -8,6 +8,13 @@ public class SpecializedCensusFalse extends Census7 {
 		
 	@Override	
 	public boolean voting(ArrayList<Voter> voters) throws Exception {
+	    //We should calc the number of falsevoters
+		//And then return the super implementation
+		//of voting. But then the vote() metods
+		//of the voters would be called twice.
+		
+		//return super.voting(voters);
+		
 		boolean toReturn = true;
 		if (voters != null) {
 			for(Voter v: voters) {

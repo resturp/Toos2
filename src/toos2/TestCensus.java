@@ -4,9 +4,19 @@ import java.util.ArrayList;
 
 public class TestCensus {
 
+	/*
+	 * This method will run Vote on a implementation of Census. 
+	 * testName is an arbitrary String that we call the name this test
+	 * voters is a valid voterlist
+	 * toTest is an implementation of the Class under test
+	 * expect is the value we expect the voting method to return
+	 * exception is a value indication if we expect a exception
+	 */
 	private static String run(String testName, ArrayList<Voter> voters,
 			Census toTest, boolean expect, boolean exception) {
-
+		/* 
+		 * If a voter in the list is not null then reset Voted
+		 */
 		if (voters != null) {
 			for (Voter v : voters) {
 				if (v != null) {
@@ -95,6 +105,8 @@ public class TestCensus {
 
 	public static void main(String[] args) {
 
+		// Test C1
+		
 		ArrayList<Census> toTest = new ArrayList<Census>();
 		toTest.add(new Census1());
 		toTest.add(new Census2());
